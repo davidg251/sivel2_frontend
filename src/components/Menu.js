@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Header.css';
 
-const Header = () => (
+const Menu = () => (
   <header className="col-25 menu-container">
     <nav>
-      <h1>SIVEL PRO</h1>
       <ul className="menu-list">
         <li>
           <Link to="/">Inicio</Link>
@@ -21,4 +20,4 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default Menu;

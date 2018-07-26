@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {initializeGeoCases} from '../store/actions'
+import {initializeGeoCases} from '../actions'
 import CasesList from '../components/CasesList'
 
 

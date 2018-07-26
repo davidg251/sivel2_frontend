@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
+import './App.css'
 
 const Home = () => (
-  <div>
+  <div className="panel">
     <h1>SIVEL_core 2 BETA</h1>
   </div>
 );

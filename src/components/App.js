@@ -1,12 +1,16 @@
 import React from "react";
-import Header from "./Header.js";
+import Menu from "./Menu.js";
 import Main from "./Main.js";
+import TopBar from "./TopBar.js";
 import './App.css';
 
 const App = () => (
-  <div className="app-container">
-    <Header />
-    <Main />
+  <div className="app-layout">
+    <TopBar/>
+    <div className="app-container">
+      <Menu />
+      <Main />
+    </div>
   </div>
 );
 

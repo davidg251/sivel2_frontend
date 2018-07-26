@@ -3,5 +3,17 @@
 }
 
 .col-25 {
-    flex-basis: 25% !important;
+    flex-basis: 18% !important;
 }
+
+.app-layout {
+    display: block;
+}
+
+.panel{
+    background-color: #eee;
+}
+
+html, body, #root, .app-layout, .app-container {
+    height: 100% !important;
+} 

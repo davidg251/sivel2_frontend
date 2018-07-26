@@ -1,7 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import {connect} from 'react-redux';
-import {initializeGeoCases} from '../store/actions'
+import {initializeGeoCases} from '../actions'
 import './Mapa.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aW1iYSIsImEiOiJjaXBlbWdwM3owMDAxdGhuZGFndXFnamwwIn0.Dyxt47gEXGCeNTzU2ObGsQ';
@@ -28,7 +28,7 @@ let Map = class Map extends React.Component {
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/dark-v9',
       center: [-70.666,4.426],
-      zoom: 5.2
+      zoom: 3.2
     });
 
     this.map.on('load', () => {
