@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-// The Header creates links that can be used to navigate
-// between routes.
-const Home= () => (
+const Home = () => (
   <div>
-    <h1>Sivel2 BETA</h1>
+    <h1>SIVEL_core 2 BETA</h1>
   </div>
 );
 

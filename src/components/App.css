@@ -1,0 +1,7 @@
+.app-container {
+    display: flex; /* or inline-flex */
+}
+
+.col-25 {
+    flex-basis: 25% !important;
+}
