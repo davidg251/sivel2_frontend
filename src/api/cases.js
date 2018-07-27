@@ -1,7 +1,10 @@
-const cases = [
-{id:1, presunto:"FARC"},
-{id:1, presunto:"FARC"}
-];
+/**
+ * Mocking client-server processing
+ */
+import cases from './index.json'
 
-export default cases;
+const TIMEOUT = 100
 
+export default {
+  getCases: (cb, timeout) => setTimeout(() => cb(cases), timeout || TIMEOUT),
+}

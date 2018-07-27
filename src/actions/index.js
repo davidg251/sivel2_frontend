@@ -1,6 +1,12 @@
-import geocases from '../api/index.json'
+import cases from '../api/cases'
 
-export const initializeGeoCases = () => ({
-    type: 'INIT_GEO_CASES',
-    geocases
-});
+export const setCases = cases => ({
+    type: 'SET_CASES',
+    cases
+})
+
+export const initializeCases = () => dispatch =>{
+    cases.getCases(cases => {
+      dispatch(setCases(cases))
+    })
+}

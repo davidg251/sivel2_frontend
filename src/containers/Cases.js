@@ -1,16 +1,16 @@
 import {connect} from 'react-redux'
-import {initializeGeoCases} from '../actions'
+import {initializeCases} from '../actions'
 import CasesList from '../components/CasesList'
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    cases: state.geocases
+    cases: state.cases
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  initializeGeoCases: geocases => dispatch(initializeGeoCases(geocases))
+  initializeCases: () => dispatch(initializeCases())
 })
 
 const Cases = connect(

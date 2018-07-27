@@ -1,7 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import {connect} from 'react-redux';
-import {initializeGeoCases} from '../actions'
+import {initializeCases} from '../actions'
 import './Mapa.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aW1iYSIsImEiOiJjaXBlbWdwM3owMDAxdGhuZGFndXFnamwwIn0.Dyxt47gEXGCeNTzU2ObGsQ';
@@ -22,7 +22,7 @@ let Map = class Map extends React.Component {
   }
 
   componentDidMount() {
-    initializeGeoCases()
+    initializeCases()
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -140,13 +140,13 @@ let Map = class Map extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    initializeGeoCases: dispatch(initializeGeoCases())
+    initializeCases: dispatch(initializeCases())
   }
 }
 
 function mapStateToProps(state) {
   return {
-    geocases: state.geocases,
+    geocases: state.cases,
     data: state.data,
     active: state.active
   };

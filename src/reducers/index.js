@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import geocases from './geocases'
+import cases from './cases'
 
 export default combineReducers({
-  geocases
+  cases
 })

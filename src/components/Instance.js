@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Instance = ({latitud, longitud, fecha, titulo}) => (
+const Instance = ({id, fecha, genero }) => (
     <div>
-        <div>Victimas {titulo}</div>
-        <div>Titulo {latitud} </div>
-        <div>Titulo {latitud} </div>
-        <div>Fecha {fecha} </div>
+      {id}
+      {fecha}
+      {genero}
     </div>
 )
 

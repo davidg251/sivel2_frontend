@@ -12,9 +12,6 @@ const Menu = () => (
         <li>
           <Link to="/casos">Casos</Link>
         </li>
-        <li>
-          <Link to="/map">Mapa</Link>
-        </li>
       </ul>
     </nav>
   </header>
