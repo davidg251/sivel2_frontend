@@ -1,10 +1,16 @@
-const cases = (state = [], action ) => {
+const initialState = {
+  cases: []
+}
+
+const cases = (state = initialState, action ) => {
   switch (action.type) {
     case 'SET_CASES':
-      return [
+      console.log("acccion ")
+      console.log(action)
+      return {
         ...state,
-        action.cases
-      ]
+        cases: action.cases
+      }
     default:
       return state
   }

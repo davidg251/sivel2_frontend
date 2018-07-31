@@ -7,6 +7,6 @@ export const setCases = cases => ({
 
 export const initializeCases = () => dispatch =>{
     cases.getCases(cases => {
-      dispatch(setCases(cases))
+      dispatch( setCases(cases) )
     })
 }

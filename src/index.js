@@ -20,7 +20,9 @@ const store = createStore(
   applyMiddleware(...middleware)
 );
 
-store.dispatch(initializeCases())
+//store.dispatch(initializeCases())
+
+//const store = createStore(rootReducer)
 
 ReactDOM.render (
   <Provider store={store}>
