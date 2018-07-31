@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import './Header.css';
 
 const Menu = () => (
-  <header className="col-25 menu-container">
+  <header className="col-2 menu-container">
     <nav>
-      <ul className="menu-list">
-        <li>
+      <ul className="menu">
+        <li className="menu-item">
           <Link to="/">Inicio</Link>
         </li>
-        <li>
+        <li className="menu-item">
           <Link to="/casos">Casos</Link>
         </li>
       </ul>

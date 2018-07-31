@@ -13,6 +13,13 @@ const mapDispatchToProps = dispatch => ({
   initializeCases: () => dispatch(initializeCases())
 })
 
+
+const getVisiblesCases = (cases, filter) => {
+  switch (filter) {
+  }
+}
+
+
 const Cases = connect(
   mapStateToProps,
   mapDispatchToProps

@@ -2,6 +2,7 @@ import React from "react";
 import Instance from './Instance'
 import { connect } from "react-redux";
 import { initializeCases } from "../actions";
+import Filters from './Filters' 
 
 const mapStateToProps = state => ({
   cases: state.cases
@@ -20,6 +21,7 @@ class CasesList extends React.Component {
   render() {
     return (
       <div>
+        <Filters/>
         {/*{this.props.cases.cases.toString()}*/}
          {this.props.cases.cases.map( (instance, i) =>
           <Instance
