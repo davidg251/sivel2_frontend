@@ -3,8 +3,8 @@ import React from "react";
 const Filters = () => (
   <div className="container">
     <div className="col-3 form-group">
-      <div class="form-group">
-        <select class="form-select">
+      <div className="form-group">
+        <select className="form-select">
           <option>Choose an option</option>
           <option>Slack</option>
           <option>Skype</option>
@@ -13,8 +13,8 @@ const Filters = () => (
       </div>
     </div>
     
-    <input classname="col-3 form-input" id="input-example-14" value="2016-12-31" type="date"/>
-    <input classname="col-3 form-input" id="input-example-14" value="2016-12-31" type="date"/>  
+    <input className="col-3 form-input" id="input-example-14" value="2016-12-31" type="date"/>
+    <input className="col-3 form-input" id="input-example-14" value="2016-12-31" type="date"/>  
   
   </div>
 );

@@ -1,12 +1,14 @@
-import cases from '../api/cases'
+import Api from '../api/index'
 
 export const setCases = cases => ({
     type: 'SET_CASES',
-    cases
+    cases: cases
 })
 
 export const initializeCases = () => dispatch =>{
-    cases.getCases(cases => {
-      dispatch( setCases(cases) )
-    })
+    Api.doGet('cases.json')
+      .then( response => {
+        console.log(response.data)
+        dispatch( setCases(response.data))
+      })
 }

@@ -5,33 +5,28 @@ import { initializeCases } from "../actions";
 import Filters from './Filters' 
 
 const mapStateToProps = state => ({
-  cases: state.cases
+  ...state.cases
 })
-/*
-const mapDispatchToProps = dispatch => ({
-  initializeCases: () => dispatch({type:'SET_CASES'})
-})*/
 
 class CasesList extends React.Component {
 
   componentDidMount() {
-    this.props.dispatch(initializeCases());
+    this.props.dispatch( initializeCases() );
   }
 
   render() {
     return (
       <div>
         <Filters/>
-        {/*{this.props.cases.cases.toString()}*/}
-         {this.props.cases.cases.map( (instance, i) =>
+         {this.props.cases.map( (instance, index) =>
           <Instance
-            key={i}
+          key={index}
             {...instance}
-        />)}
+         />)}
       </div>
     )
   }
 
 }
 
-export default connect(mapStateToProps/*, mapDispatchToProps*/)(CasesList);
+export default connect(mapStateToProps)(CasesList);
