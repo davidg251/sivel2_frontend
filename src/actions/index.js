@@ -8,7 +8,6 @@ export const setCases = cases => ({
 export const initializeCases = () => dispatch =>{
     Api.doGet('cases.json')
       .then( response => {
-        console.log(response.data)
         dispatch( setCases(response.data))
       })
 }
