@@ -7,7 +7,7 @@ import Map from './Map';
 
 /*componente raiz*/
 const Main = () => (
-  <main className="panel">
+  <main className="col-10 panel">
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/casos" component={CasesList} />

@@ -4,8 +4,9 @@ import './Header.css';
 
 const Menu = () => (
   <header className="col-2 menu-container">
-    <nav>
+    <nav className="full-height">
       <ul className="menu">
+        <li className="menu-item"><h2>SivelPro.beta</h2></li>
         <li className="menu-item">
           <Link to="/">Inicio</Link>
         </li>

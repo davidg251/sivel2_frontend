@@ -6,7 +6,6 @@ import './App.css';
 
 const App = () => (
   <div className="app-layout">
-    <TopBar/>
     <div className="app-container">
       <Menu />
       <Main />

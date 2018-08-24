@@ -3,28 +3,17 @@ import * as d3 from "d3";
 
 class PieChart extends React.Component {
 
-  drawLine() {
-    let xScale =
-      d3.scaleTime()
-        .domain(d3.extent(this.props.data, ({fecha}) => fecha))
-        .rangeRound([0, this.props.width ])
+  drawPie() {
 
-    let yScale =
-      d3.scaleLinear()
-        .domain(d3.extent(this.props.data, ({contexto}) => contexto))
-        .rangeRound([this.props.height, 0])
+    console.log(this.props.data)
 
-    let line = d3.line()
-        .x((d) => xScale(d.fecha))
-        .y((d) => yScale(d.contexto))
+    let pie = d3.pie()
+    .sort(null)
+    .value((d)=> d )
 
     return (
       <path
-        stroke="black"
-        fill="none"
-        className="line"
-        strokeWidth="3.5"
-        d={line(this.props.data)}
+        d={pie(this.props.data)}
       />
     );
   }
@@ -36,7 +25,7 @@ class PieChart extends React.Component {
         width={this.props.width}
         height={this.props.height}
       > 
-        {this.drawLine()}
+        {this.drawPie(this.props.data)}
       </svg>
     )
   } 

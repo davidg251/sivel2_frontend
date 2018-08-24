@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { initializeCases } from "../actions";
 import Filters from './Filters' 
 import LineChart from './LineChart'
+import PieChart from './PieChart'
 import * as d3 from "d3";
 
 const mapStateToProps = state => ({
@@ -31,10 +32,24 @@ class CasesList extends React.Component {
     })
   }
 
+  dataPie() {
+    return [
+      400,200,100
+    ]
+  }
+
   render() {
     return (
       <div>
-        <LineChart height={200} width={600} data={this.cleanData(this.props.cases)}/>
+        <LineChart 
+          height={200}
+          width={600}
+          data={this.cleanData(this.props.cases)}
+          stroke="#111"
+        />
+        <PieChart
+          data={this.dataPie()}
+        />
         {/*<Filters/>*/}
          {this.props.cases.map( (instance, index) =>
           <Instance
