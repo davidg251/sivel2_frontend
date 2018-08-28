@@ -32,30 +32,29 @@ class CasesList extends React.Component {
     })
   }
 
-  dataPie() {
-    return [
-      400,200,100
-    ]
-  }
-
   render() {
     return (
       <div>
+
         <LineChart 
           height={200}
           width={600}
           data={this.cleanData(this.props.cases)}
           stroke="#111"
         />
-        <PieChart
-          data={this.dataPie()}
+        <PieChart 
+          data={[1, 2, 3, 4, 5]} 
+          height={200}
+          width={600} 
         />
-        {/*<Filters/>*/}
+        
+        {/*<Filters/>
          {this.props.cases.map( (instance, index) =>
           <Instance
           key={index}
             {...instance}
          />)}
+        */}
       </div>
     )
   }
