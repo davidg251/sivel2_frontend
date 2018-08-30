@@ -1,23 +1,15 @@
 import {connect} from 'react-redux'
 import {initializeCases} from '../actions'
 import CasesList from '../components/CasesList'
+import {getVisibleCases} from '../selectors'
 
-
-const mapStateToProps = state => {
-  return {
-    cases: state.cases
-  }
-}
+const mapStateToProps = state => ({
+  filteredCases: getVisibleCases(state)
+})
 
 const mapDispatchToProps = dispatch => ({
   initializeCases: () => dispatch( initializeCases() )
 })
-
-
-const getVisiblesCases = (cases, filter) => {
-  switch (filter) {
-  }
-}
 
 
 const Cases = connect(

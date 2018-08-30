@@ -5,6 +5,16 @@ export const setCases = cases => ({
     cases: cases
 })
 
+export const setFechaInicio = fecha => ({
+  type: 'SET_INI_DATE',
+  fecha: fecha
+})
+
+export const setFechaFinal = fecha => ({
+  type: 'SET_FIN_DATE',
+  fecha: fecha
+})
+
 export const initializeCases = () => dispatch =>{
     Api.doGet('cases.json')
       .then( response => {
